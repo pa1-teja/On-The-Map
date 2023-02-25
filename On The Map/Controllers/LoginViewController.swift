@@ -19,14 +19,8 @@ class LoginViewController: UIViewController {
     
     @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
     
-    
-    struct Connectivity {
-        static let sharedInstance = NetworkReachabilityManager()!
-        static var isConnectedToInternet:Bool {
-            let connected = self.sharedInstance.isReachable
-            return connected
-        }
-    }
+
+    var sharedAppDelegateObject = UIApplication.shared.delegate as! AppDelegate
     
     
     override func viewDidLoad() {
@@ -35,7 +29,9 @@ class LoginViewController: UIViewController {
         // Do any additional setup after loading the view.
         let emailTxt = userEmailAddr.text
         
-        if(emailTxt != nil || emailTxt != ""){
+        if(!Utilities.isConnectedToNetwork()){
+            Utilities.showAlertDialog(alertTitle: "Oops", alertMessage: "Please check you internet connectivity", okButtonTxt: "OK")
+        }else if(emailTxt != nil || emailTxt != ""){
             userEmailAddr.text = ""
             userPassword.text = ""
         }
@@ -50,6 +46,7 @@ class LoginViewController: UIViewController {
         
         isUserScreenInteraction(isEnabled: false)
         
+    
         if(userEmail == "" && userEmail == nil){
             let alert = UIAlertController(title: "Oops", message: "Please enter your email address", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
@@ -59,12 +56,12 @@ class LoginViewController: UIViewController {
             alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
             present(alert, animated: true)
         }else{
-            var loginRequestPackage: String = "{\"udacity\": {\"username\": \"\(userEmail ?? "")\", \"password\": \"\(password ?? "")\"}}"
+            let loginRequestPackage: String = "{\"udacity\": {\"username\": \"\(userEmail ?? "")\", \"password\": \"\(password ?? "")\"}}"
             
             GenericAPIInfo.taskInteractWithAPI(methodType: GenericAPIInfo.MethodType.POST , url: LoginAPI.LoginEndpoint.login.url, requestBody: loginRequestPackage, responseType: LoginResponseJSON.LogInResponse.self, completionHandler: {
                 (success, error) in
                 guard let success = success else{
-                    print("JSON response parsing failed : \(error)")
+                    print("JSON response parsing failed : \(String(describing: error))")
                     self.handleLoginResponse(success: nil, error: error)
                     return
                 }
@@ -77,10 +74,14 @@ class LoginViewController: UIViewController {
     
     
     func handleLoginResponse(success: LoginResponseJSON.LogInResponse?, error:Error?){
-        isUserScreenInteraction(isEnabled: true)
+       
         if(success != nil){
-            print("JSON response successful : \(success)")
+            print("JSON response successful : \(String(describing: success))")
+            
+            GenericAPIInfo.taskInteractWithAPI(methodType: GenericAPIInfo.MethodType.GET, url: StudentLocationAPI.StudentLocationEndpoint.order("-updatedAt", 100).url, requestBody: "", responseType: StudentLocationResults.StudentResults.self, completionHandler: handleStudentProfileRecords(success:error:))
+            
         }else{
+            isUserScreenInteraction(isEnabled: true)
             present(Utilities.showAlertDialog(alertTitle: "Oops", alertMessage: "Your email or password are incorrect. Please check and try again.", okButtonTxt: "OK"), animated: true)
         }
     }
@@ -90,6 +91,17 @@ class LoginViewController: UIViewController {
         userEmailAddr.isEnabled = isEnabled
         userPassword.isEnabled = isEnabled
         LoginButton.isEnabled = isEnabled
+    }
+    
+    func handleStudentProfileRecords(success: StudentLocationResults.StudentResults?, error: Error?){
+        if(success != nil){
+            isUserScreenInteraction(isEnabled: true)
+            sharedAppDelegateObject.studentProfiles.results = success!.results
+            performSegue(withIdentifier: "LoginToStudentDetails", sender: nil)
+        }else{
+            isUserScreenInteraction(isEnabled: true)
+            present(Utilities.showAlertDialog(alertTitle: "Oops", alertMessage: "Login was successfull but we couldn't fetch the student profiles. Please try again in some time.", okButtonTxt: "OK"), animated: true)
+        }
     }
 }
 

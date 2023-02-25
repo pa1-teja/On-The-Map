@@ -72,12 +72,13 @@ class GenericAPIInfo{
                     }
                     
                     do{
-                        let range = 5..<data.count
-                      let newData = data.subdata(in: range)
-                        
-                        let responseBody = try JSONDecoder().decode(ResponseType.self, from: newData)
-                        DispatchQueue.main.async {
-                            completionHandler(responseBody, nil)
+                        if(url == LoginAPI.LoginEndpoint.login.url){
+                            let range = 5..<data.count
+                            let newData = data.subdata(in: range)
+                            let responseBody = try JSONDecoder().decode(ResponseType.self, from: newData)
+                            DispatchQueue.main.async {
+                                completionHandler(responseBody, nil)
+                            }
                         }
                     }catch{
                         DispatchQueue.main.async {

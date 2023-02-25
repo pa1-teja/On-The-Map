@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D73FE48B29A9E6210000174C /* StudentLocationAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73FE48A29A9E6210000174C /* StudentLocationAPI.swift */; };
 		D7C45B7A29A5E310008F9EE4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C45B7929A5E310008F9EE4 /* AppDelegate.swift */; };
 		D7C45B7C29A5E310008F9EE4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C45B7B29A5E310008F9EE4 /* SceneDelegate.swift */; };
 		D7C45B7E29A5E310008F9EE4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C45B7D29A5E310008F9EE4 /* LoginViewController.swift */; };
@@ -17,9 +18,14 @@
 		D7C45B9529A621B1008F9EE4 /* GenericAPIStuff.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C45B9429A621B1008F9EE4 /* GenericAPIStuff.swift */; };
 		D7C45B9829A660D5008F9EE4 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C45B9729A660D5008F9EE4 /* Utils.swift */; };
 		D7C45B9A29A67A14008F9EE4 /* LogInResponseJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C45B9929A67A14008F9EE4 /* LogInResponseJSON.swift */; };
+		D7C98B1129A86A98007CE6BE /* StudentProfileTableTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C98B1029A86A98007CE6BE /* StudentProfileTableTableViewController.swift */; };
+		D7C98B1329A87BC6007CE6BE /* StudentsTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C98B1229A87BC6007CE6BE /* StudentsTabBarViewController.swift */; };
+		D7CD920529AA11E90063E1D5 /* StudentLocationResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7CD920429AA11E90063E1D5 /* StudentLocationResults.swift */; };
+		D7CD920729AA12640063E1D5 /* StudentProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7CD920629AA12640063E1D5 /* StudentProfile.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D73FE48A29A9E6210000174C /* StudentLocationAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentLocationAPI.swift; sourceTree = "<group>"; };
 		D7C45B7629A5E310008F9EE4 /* On The Map.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "On The Map.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7C45B7929A5E310008F9EE4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D7C45B7B29A5E310008F9EE4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -32,6 +38,10 @@
 		D7C45B9429A621B1008F9EE4 /* GenericAPIStuff.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericAPIStuff.swift; sourceTree = "<group>"; };
 		D7C45B9729A660D5008F9EE4 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		D7C45B9929A67A14008F9EE4 /* LogInResponseJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInResponseJSON.swift; sourceTree = "<group>"; };
+		D7C98B1029A86A98007CE6BE /* StudentProfileTableTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentProfileTableTableViewController.swift; sourceTree = "<group>"; };
+		D7C98B1229A87BC6007CE6BE /* StudentsTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentsTabBarViewController.swift; sourceTree = "<group>"; };
+		D7CD920429AA11E90063E1D5 /* StudentLocationResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentLocationResults.swift; sourceTree = "<group>"; };
+		D7CD920629AA12640063E1D5 /* StudentProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentProfile.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +55,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D73FE48929A9E5D10000174C /* Student Location API Stuff */ = {
+			isa = PBXGroup;
+			children = (
+				D73FE48A29A9E6210000174C /* StudentLocationAPI.swift */,
+				D7CD920429AA11E90063E1D5 /* StudentLocationResults.swift */,
+				D7CD920629AA12640063E1D5 /* StudentProfile.swift */,
+			);
+			path = "Student Location API Stuff";
+			sourceTree = "<group>";
+		};
 		D7C45B6D29A5E310008F9EE4 = {
 			isa = PBXGroup;
 			children = (
@@ -87,6 +107,7 @@
 		D7C45B8E29A5E355008F9EE4 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				D73FE48929A9E5D10000174C /* Student Location API Stuff */,
 				D7C45B9629A660B6008F9EE4 /* BaseAppUtils */,
 				D7C45B9129A617B9008F9EE4 /* Udacity Login API Stuff */,
 				D7C45B9429A621B1008F9EE4 /* GenericAPIStuff.swift */,
@@ -98,6 +119,8 @@
 			isa = PBXGroup;
 			children = (
 				D7C45B7D29A5E310008F9EE4 /* LoginViewController.swift */,
+				D7C98B1029A86A98007CE6BE /* StudentProfileTableTableViewController.swift */,
+				D7C98B1229A87BC6007CE6BE /* StudentsTabBarViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -204,7 +227,12 @@
 				D7C45B7A29A5E310008F9EE4 /* AppDelegate.swift in Sources */,
 				D7C45B7C29A5E310008F9EE4 /* SceneDelegate.swift in Sources */,
 				D7C45B9A29A67A14008F9EE4 /* LogInResponseJSON.swift in Sources */,
+				D7C98B1129A86A98007CE6BE /* StudentProfileTableTableViewController.swift in Sources */,
+				D7C98B1329A87BC6007CE6BE /* StudentsTabBarViewController.swift in Sources */,
 				D7C45B9829A660D5008F9EE4 /* Utils.swift in Sources */,
+				D7CD920529AA11E90063E1D5 /* StudentLocationResults.swift in Sources */,
+				D73FE48B29A9E6210000174C /* StudentLocationAPI.swift in Sources */,
+				D7CD920729AA12640063E1D5 /* StudentProfile.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
