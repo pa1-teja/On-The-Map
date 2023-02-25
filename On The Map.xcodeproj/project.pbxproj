@@ -22,6 +22,7 @@
 		D7C98B1329A87BC6007CE6BE /* StudentsTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C98B1229A87BC6007CE6BE /* StudentsTabBarViewController.swift */; };
 		D7CD920529AA11E90063E1D5 /* StudentLocationResults.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7CD920429AA11E90063E1D5 /* StudentLocationResults.swift */; };
 		D7CD920729AA12640063E1D5 /* StudentProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7CD920629AA12640063E1D5 /* StudentProfile.swift */; };
+		D7CD920929AA775F0063E1D5 /* ProfilesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7CD920829AA775F0063E1D5 /* ProfilesTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		D7C98B1229A87BC6007CE6BE /* StudentsTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentsTabBarViewController.swift; sourceTree = "<group>"; };
 		D7CD920429AA11E90063E1D5 /* StudentLocationResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentLocationResults.swift; sourceTree = "<group>"; };
 		D7CD920629AA12640063E1D5 /* StudentProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentProfile.swift; sourceTree = "<group>"; };
+		D7CD920829AA775F0063E1D5 /* ProfilesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilesTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				D7C45B7F29A5E310008F9EE4 /* Main.storyboard */,
+				D7CD920829AA775F0063E1D5 /* ProfilesTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -230,6 +233,7 @@
 				D7C98B1129A86A98007CE6BE /* StudentProfileTableTableViewController.swift in Sources */,
 				D7C98B1329A87BC6007CE6BE /* StudentsTabBarViewController.swift in Sources */,
 				D7C45B9829A660D5008F9EE4 /* Utils.swift in Sources */,
+				D7CD920929AA775F0063E1D5 /* ProfilesTableViewCell.swift in Sources */,
 				D7CD920529AA11E90063E1D5 /* StudentLocationResults.swift in Sources */,
 				D73FE48B29A9E6210000174C /* StudentLocationAPI.swift in Sources */,
 				D7CD920729AA12640063E1D5 /* StudentProfile.swift in Sources */,
