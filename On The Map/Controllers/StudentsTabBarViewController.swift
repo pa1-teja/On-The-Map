@@ -15,9 +15,30 @@ class StudentsTabBarViewController: UITabBarController {
         // Do any additional setup after loading the view.
         navigationItem.title = "On the Map"
         
+        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "LOGOUT", style: .plain, target: self, action: #selector(onClickLogout))
+        
+        self.navigationItem.setHidesBackButton(true, animated: false)
+        
     }
     
+    @objc func onClickLogout(){
+        GenericAPIInfo.taskInteractWithAPI(methodType: GenericAPIInfo.MethodType.DELETE, url: LoginAPI.LoginEndpoint.logout.url, requestBody: "", responseType: LogoutAPI.LogoutResponse.self, completionHandler: handleLogoutSequence(success:error:))
+    }
 
+    
+    func handleLogoutSequence(success: LogoutAPI.LogoutResponse?, error: Error?){
+        
+        if let success = success{
+            LogoutAPI.LogoutResponse(session: success.session)
+            navigationController?.popViewController(animated: true)
+        } else {
+            
+            print("Logout error: \(error.debugDescription)")
+            
+           present(Utilities.showAlertDialog(alertTitle: "Oops", alertMessage: "Failed to logout, Please try again after sometime", okButtonTxt: "OK"), animated: true)
+        }
+    }
+    
     /*
     // MARK: - Navigation
 

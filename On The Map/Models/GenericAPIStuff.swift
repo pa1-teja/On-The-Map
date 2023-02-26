@@ -91,23 +91,46 @@ class GenericAPIInfo{
             }
             return
         case .PUT: return
-        case .DELETE: return
-            //        var request = URLRequest(url: url)
-            //        request.httpMethod = "DELETE"
-            //
-            //        let body = LogoutRequest(sessionId: Auth.sessionId)
-            //        request.httpBody = try! JSONEncoder().encode(body)
-            //        request.addValue("application/json", forHTTPHeaderField: "Content-Type")
-            //
-            //        let task = URLSession.shared.dataTask(with: request, completionHandler: {(data, response, error) in
-            //
-            //            Auth.requestToken = ""
-            //            Auth.sessionId = ""
-            //            completionHandler()
-            //
-            //        })
-            //
-            //        task.resume()
+        case .DELETE:
+            var request = URLRequest(url: url)
+            request.httpMethod = MethodType.DELETE.stringValue
+            var xsrfCookie: HTTPCookie? = nil
+            let sharedCookieStorage = HTTPCookieStorage.shared
+            for cookie in sharedCookieStorage.cookies! {
+              if cookie.name == "XSRF-TOKEN" { xsrfCookie = cookie }
+            }
+            if let xsrfCookie = xsrfCookie {
+              request.setValue(xsrfCookie.value, forHTTPHeaderField: "X-XSRF-TOKEN")
+            }
+            let task = URLSession.shared.dataTask(with: request, completionHandler: {(data, response, error) in
+                guard let data = data else {
+                    DispatchQueue.main.async {
+                        completionHandler(nil, error)
+                        print("Failed to send the sessionID request package")
+                    }
+                    return
+                }
+                
+                do{
+                    if(url == LoginAPI.LoginEndpoint.logout.url){
+                        let range = 5..<data.count
+                        let newData = data.subdata(in: range)
+//                        let responseString = String(data: newData, encoding: .utf8)!
+//                        print("response STring logout : \(responseString)")
+                        let responseBody = try JSONDecoder().decode(ResponseType.self, from: newData)
+                        DispatchQueue.main.async {
+                            completionHandler(responseBody, nil)
+                        }
+                    }
+                }catch{
+                    DispatchQueue.main.async {
+                        completionHandler(nil, error)
+                    }
+                   
+                }
+            })
+            task.resume()
+            return
         }
         
     }

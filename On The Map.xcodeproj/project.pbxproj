@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		D73FE48B29A9E6210000174C /* StudentLocationAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73FE48A29A9E6210000174C /* StudentLocationAPI.swift */; };
 		D793AC9E29AB40A0002746CE /* StudentDetailAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D793AC9D29AB40A0002746CE /* StudentDetailAnnotationView.swift */; };
+		D793ACA029AB8B92002746CE /* LogoutResponseJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = D793AC9F29AB8B92002746CE /* LogoutResponseJSON.swift */; };
 		D7C45B7A29A5E310008F9EE4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C45B7929A5E310008F9EE4 /* AppDelegate.swift */; };
 		D7C45B7C29A5E310008F9EE4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C45B7B29A5E310008F9EE4 /* SceneDelegate.swift */; };
 		D7C45B7E29A5E310008F9EE4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C45B7D29A5E310008F9EE4 /* LoginViewController.swift */; };
@@ -30,6 +31,7 @@
 /* Begin PBXFileReference section */
 		D73FE48A29A9E6210000174C /* StudentLocationAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentLocationAPI.swift; sourceTree = "<group>"; };
 		D793AC9D29AB40A0002746CE /* StudentDetailAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentDetailAnnotationView.swift; sourceTree = "<group>"; };
+		D793AC9F29AB8B92002746CE /* LogoutResponseJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutResponseJSON.swift; sourceTree = "<group>"; };
 		D7C45B7629A5E310008F9EE4 /* On The Map.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "On The Map.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7C45B7929A5E310008F9EE4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D7C45B7B29A5E310008F9EE4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -115,7 +117,7 @@
 			children = (
 				D73FE48929A9E5D10000174C /* Student Location API Stuff */,
 				D7C45B9629A660B6008F9EE4 /* BaseAppUtils */,
-				D7C45B9129A617B9008F9EE4 /* Udacity Login API Stuff */,
+				D7C45B9129A617B9008F9EE4 /* Udacity LoginLogout API Stuff */,
 				D7C45B9429A621B1008F9EE4 /* GenericAPIStuff.swift */,
 			);
 			path = Models;
@@ -142,13 +144,14 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		D7C45B9129A617B9008F9EE4 /* Udacity Login API Stuff */ = {
+		D7C45B9129A617B9008F9EE4 /* Udacity LoginLogout API Stuff */ = {
 			isa = PBXGroup;
 			children = (
 				D7C45B9229A61D6E008F9EE4 /* LoginAPIDetails.swift */,
 				D7C45B9929A67A14008F9EE4 /* LogInResponseJSON.swift */,
+				D793AC9F29AB8B92002746CE /* LogoutResponseJSON.swift */,
 			);
-			path = "Udacity Login API Stuff";
+			path = "Udacity LoginLogout API Stuff";
 			sourceTree = "<group>";
 		};
 		D7C45B9629A660B6008F9EE4 /* BaseAppUtils */ = {
@@ -236,6 +239,7 @@
 				D7C45B7A29A5E310008F9EE4 /* AppDelegate.swift in Sources */,
 				D7C45B7C29A5E310008F9EE4 /* SceneDelegate.swift in Sources */,
 				D7C45B9A29A67A14008F9EE4 /* LogInResponseJSON.swift in Sources */,
+				D793ACA029AB8B92002746CE /* LogoutResponseJSON.swift in Sources */,
 				D793AC9E29AB40A0002746CE /* StudentDetailAnnotationView.swift in Sources */,
 				D7C98B1129A86A98007CE6BE /* StudentProfileTableTableViewController.swift in Sources */,
 				D7C98B1329A87BC6007CE6BE /* StudentsTabBarViewController.swift in Sources */,

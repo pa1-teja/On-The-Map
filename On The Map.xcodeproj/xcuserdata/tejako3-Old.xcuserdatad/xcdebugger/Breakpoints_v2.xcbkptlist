@@ -7,80 +7,144 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "0D1FF224-A85C-4604-A232-3FF2C25866E6"
+            uuid = "730CEF36-F257-4965-97F8-7474BB6D9EBD"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "On The Map/Controllers/StudentProfileTableTableViewController.swift"
+            filePath = "On The Map/Controllers/StudentsTabBarViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "36"
-            endingLineNumber = "36"
-            landmarkName = "viewDidLoad()"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
+            landmarkName = "handleLogoutSequence(success:error:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "A4CF710B-839B-4392-80FD-607357E39368"
+            uuid = "960DE978-6CDF-4735-AA4C-CFDFC3A8F1C7"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "On The Map/Controllers/StudentProfileTableTableViewController.swift"
+            filePath = "On The Map/Controllers/StudentsTabBarViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "65"
-            endingLineNumber = "65"
-            landmarkName = "tableView(_:numberOfRowsInSection:)"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "handleLogoutSequence(success:error:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "546065AC-93A9-4805-AA23-34BA4AF89FB7"
+            uuid = "4DEA429C-F39A-4B16-8D48-C5F6BB294EA3"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "On The Map/Controllers/StudentProfileTableTableViewController.swift"
+            filePath = "On The Map/Models/GenericAPIStuff.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "60"
-            endingLineNumber = "60"
-            landmarkName = "numberOfSections(in:)"
+            startingLineNumber = "96"
+            endingLineNumber = "96"
+            landmarkName = "taskInteractWithAPI(methodType:url:requestBody:responseType:completionHandler:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "2285B6AF-2E19-426C-BCDC-77AA71A26467"
+            uuid = "9B8F47A0-5414-456F-89F4-78D8C5123CCA"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "On The Map/Controllers/StudentProfileTableTableViewController.swift"
+            filePath = "On The Map/Models/GenericAPIStuff.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "54"
-            endingLineNumber = "54"
-            landmarkName = "refreshStudentProfilesDataOnTableView()"
+            startingLineNumber = "106"
+            endingLineNumber = "106"
+            landmarkName = "taskInteractWithAPI(methodType:url:requestBody:responseType:completionHandler:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "B8BF85B2-FF90-4668-86EA-08E0FABFA6DD"
+            uuid = "04F8FEAD-7E5D-4D48-8BD9-28454DA0D3F9"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "On The Map/Controllers/StudentProfileTableTableViewController.swift"
+            filePath = "On The Map/Models/GenericAPIStuff.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "44"
-            endingLineNumber = "44"
-            landmarkName = "viewWillAppear(_:)"
+            startingLineNumber = "109"
+            endingLineNumber = "109"
+            landmarkName = "taskInteractWithAPI(methodType:url:requestBody:responseType:completionHandler:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "41AA25E7-AED4-4FB2-A687-319C37F1F0FE"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "On The Map/Models/GenericAPIStuff.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "122"
+            endingLineNumber = "122"
+            landmarkName = "taskInteractWithAPI(methodType:url:requestBody:responseType:completionHandler:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "76BD8D41-5A34-4032-AB98-4C41118BF286"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "On The Map/Models/GenericAPIStuff.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "127"
+            endingLineNumber = "127"
+            landmarkName = "taskInteractWithAPI(methodType:url:requestBody:responseType:completionHandler:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C337C14A-0946-48C6-8BCF-F9F156FCE3B4"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "On The Map/Models/GenericAPIStuff.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "119"
+            endingLineNumber = "119"
+            landmarkName = "taskInteractWithAPI(methodType:url:requestBody:responseType:completionHandler:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A1202128-96D8-43BA-9E0A-2E1A0660F512"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "On The Map/Models/GenericAPIStuff.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "117"
+            endingLineNumber = "117"
+            landmarkName = "taskInteractWithAPI(methodType:url:requestBody:responseType:completionHandler:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
