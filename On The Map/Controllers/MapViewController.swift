@@ -27,27 +27,23 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         
         mapView.delegate = self
         mapView.register(StudentDetailAnnotationView.self, forAnnotationViewWithReuseIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier)
-        
+    
         for profile in studentProfiles.results{
             let annotation = MKPointAnnotation()
-
             annotation.coordinate = CLLocationCoordinate2D(latitude: profile.latitude, longitude: profile.longitude)
-
             annotation.title = profile.firstName
             annotation.subtitle = profile.mediaURL
-
-
             mapView.addAnnotation(annotation)
-            
-            
         }
-        
         
     }
     
    
-    
-    
+  
+    func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
+        let strUrl: String = (view.annotation?.subtitle!)!
+            UIApplication.shared.open(URL(string: strUrl)!)
+    }
 
     /*
     // MARK: - Navigation
