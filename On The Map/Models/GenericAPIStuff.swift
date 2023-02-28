@@ -79,6 +79,11 @@ class GenericAPIInfo{
                             DispatchQueue.main.async {
                                 completionHandler(responseBody, nil)
                             }
+                        } else if(url == URL(string: StudentLocationAPI.StudentLocationEndpoint.baseEndpoint)){
+                            let responseBody = try JSONDecoder().decode(ResponseType.self, from: data)
+                            DispatchQueue.main.async {
+                                completionHandler(responseBody, nil)
+                            }
                         }
                     }catch{
                         DispatchQueue.main.async {
@@ -90,7 +95,28 @@ class GenericAPIInfo{
                 task.resume()
             }
             return
-        case .PUT: return
+        case .PUT:
+            var request = URLRequest(url: url)
+            request.httpMethod = "PUT"
+            request.addValue("application/json", forHTTPHeaderField: "Content-Type")
+            request.httpBody = requestBody.data(using: .utf8)
+            let session = URLSession.shared
+            let task = session.dataTask(with: request) { data, response, error in
+              if error != nil {
+                  DispatchQueue.main.async {
+                      completionHandler(nil, error)
+                  }
+                  return
+              }
+//                let responseBody = try JSONDecoder().decode(ResponseType.self, from: String(data: data!, encoding: .utf8)!)
+//                DispatchQueue.main.async {
+//                    completionHandler(responseBody, nil)
+//                }
+              print( " laudaaa....: \(String(data: data!, encoding: .utf8)!)")
+            }
+            task.resume()
+            
+            return
         case .DELETE:
             var request = URLRequest(url: url)
             request.httpMethod = MethodType.DELETE.stringValue

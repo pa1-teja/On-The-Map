@@ -41,9 +41,8 @@ class StudentProfileTableTableViewController: UIViewController,UITableViewDataSo
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        if(!studentProfiles.results.isEmpty){
+
             refreshStudentProfilesDataOnTableView()
-        }
     }
 
     private func toggleNoProfilesMsgVisibility(isHidden: Bool){

@@ -15,8 +15,6 @@ class LoginViewController: UIViewController {
     
     @IBOutlet weak var LoginButton: UIButton!
     
-    @IBOutlet weak var signUpButton: UILabel!
-    
     @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
     
 
@@ -29,15 +27,21 @@ class LoginViewController: UIViewController {
         // Do any additional setup after loading the view.
         let emailTxt = userEmailAddr.text
         
+       
+        
         if(!Utilities.isConnectedToNetwork()){
-            Utilities.showAlertDialog(alertTitle: "Oops", alertMessage: "Please check you internet connectivity", okButtonTxt: "OK")
+           present(Utilities.showAlertDialog(alertTitle: "No Internet", alertMessage: "Please check you internet connectivity", okButtonTxt: "OK"), animated: true)
         }else if(emailTxt != nil || emailTxt != ""){
             userEmailAddr.text = ""
             userPassword.text = ""
         }
     }
-
-
+    
+    
+    @IBAction func onClickSignUp(){
+        UIApplication.shared.open(URL(string: "https://www.udacity.com/account/auth#!/signup")!)
+    }
+    
     
     @IBAction func onClickLogin(_ sender: Any) {
         
@@ -77,7 +81,7 @@ class LoginViewController: UIViewController {
        
         if(success != nil){
             print("JSON response successful : \(String(describing: success))")
-            
+            sharedAppDelegateObject.LoginUserObj = success
             GenericAPIInfo.taskInteractWithAPI(methodType: GenericAPIInfo.MethodType.GET, url: StudentLocationAPI.StudentLocationEndpoint.order("-updatedAt", 100).url, requestBody: "", responseType: StudentLocationResults.StudentResults.self, completionHandler: handleStudentProfileRecords(success:error:))
             
         }else{

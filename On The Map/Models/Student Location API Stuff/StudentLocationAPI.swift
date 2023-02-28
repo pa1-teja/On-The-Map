@@ -27,6 +27,8 @@ class StudentLocationAPI {
         
         case uniqueKey(String)
         
+        
+        
         var queryParams: [URLQueryItem]{
             switch self{
             case .limit(let maxNoOfRecords): return [URLQueryItem(name: "limit", value: String(maxNoOfRecords))]

@@ -7,9 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D72F8D0D29ACB1B1000541E7 /* NewStudentLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D72F8D0C29ACB1B1000541E7 /* NewStudentLocationViewController.swift */; };
+		D738939229AC648F001F30F7 /* AddStudentProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D738939129AC648F001F30F7 /* AddStudentProfileViewController.swift */; };
 		D73FE48B29A9E6210000174C /* StudentLocationAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = D73FE48A29A9E6210000174C /* StudentLocationAPI.swift */; };
+		D77FD51629AD357D003E3EAF /* AddStudentResponseJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = D77FD51529AD357D003E3EAF /* AddStudentResponseJSON.swift */; };
 		D793AC9E29AB40A0002746CE /* StudentDetailAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D793AC9D29AB40A0002746CE /* StudentDetailAnnotationView.swift */; };
 		D793ACA029AB8B92002746CE /* LogoutResponseJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = D793AC9F29AB8B92002746CE /* LogoutResponseJSON.swift */; };
+		D7B4D83629AD4DBF00E390DB /* UpdateStudentJSONResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7B4D83529AD4DBF00E390DB /* UpdateStudentJSONResponse.swift */; };
 		D7C45B7A29A5E310008F9EE4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C45B7929A5E310008F9EE4 /* AppDelegate.swift */; };
 		D7C45B7C29A5E310008F9EE4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C45B7B29A5E310008F9EE4 /* SceneDelegate.swift */; };
 		D7C45B7E29A5E310008F9EE4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7C45B7D29A5E310008F9EE4 /* LoginViewController.swift */; };
@@ -29,9 +33,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D72F8D0C29ACB1B1000541E7 /* NewStudentLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewStudentLocationViewController.swift; sourceTree = "<group>"; };
+		D738939129AC648F001F30F7 /* AddStudentProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddStudentProfileViewController.swift; sourceTree = "<group>"; };
 		D73FE48A29A9E6210000174C /* StudentLocationAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentLocationAPI.swift; sourceTree = "<group>"; };
+		D77FD51529AD357D003E3EAF /* AddStudentResponseJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddStudentResponseJSON.swift; sourceTree = "<group>"; };
 		D793AC9D29AB40A0002746CE /* StudentDetailAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentDetailAnnotationView.swift; sourceTree = "<group>"; };
 		D793AC9F29AB8B92002746CE /* LogoutResponseJSON.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutResponseJSON.swift; sourceTree = "<group>"; };
+		D7B4D83529AD4DBF00E390DB /* UpdateStudentJSONResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateStudentJSONResponse.swift; sourceTree = "<group>"; };
 		D7C45B7629A5E310008F9EE4 /* On The Map.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "On The Map.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7C45B7929A5E310008F9EE4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D7C45B7B29A5E310008F9EE4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +71,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D738939029AC6434001F30F7 /* Add Student Profile Stuff */ = {
+			isa = PBXGroup;
+			children = (
+				D77FD51529AD357D003E3EAF /* AddStudentResponseJSON.swift */,
+				D7B4D83529AD4DBF00E390DB /* UpdateStudentJSONResponse.swift */,
+			);
+			path = "Add Student Profile Stuff";
+			sourceTree = "<group>";
+		};
 		D73FE48929A9E5D10000174C /* Student Location API Stuff */ = {
 			isa = PBXGroup;
 			children = (
@@ -115,6 +132,7 @@
 		D7C45B8E29A5E355008F9EE4 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				D738939029AC6434001F30F7 /* Add Student Profile Stuff */,
 				D73FE48929A9E5D10000174C /* Student Location API Stuff */,
 				D7C45B9629A660B6008F9EE4 /* BaseAppUtils */,
 				D7C45B9129A617B9008F9EE4 /* Udacity LoginLogout API Stuff */,
@@ -130,6 +148,8 @@
 				D7C98B1029A86A98007CE6BE /* StudentProfileTableTableViewController.swift */,
 				D7C98B1229A87BC6007CE6BE /* StudentsTabBarViewController.swift */,
 				D7CD920A29AA8F650063E1D5 /* MapViewController.swift */,
+				D738939129AC648F001F30F7 /* AddStudentProfileViewController.swift */,
+				D72F8D0C29ACB1B1000541E7 /* NewStudentLocationViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -233,7 +253,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D77FD51629AD357D003E3EAF /* AddStudentResponseJSON.swift in Sources */,
 				D7C45B7E29A5E310008F9EE4 /* LoginViewController.swift in Sources */,
+				D738939229AC648F001F30F7 /* AddStudentProfileViewController.swift in Sources */,
+				D72F8D0D29ACB1B1000541E7 /* NewStudentLocationViewController.swift in Sources */,
 				D7C45B9529A621B1008F9EE4 /* GenericAPIStuff.swift in Sources */,
 				D7C45B9329A61D6E008F9EE4 /* LoginAPIDetails.swift in Sources */,
 				D7C45B7A29A5E310008F9EE4 /* AppDelegate.swift in Sources */,
@@ -247,6 +270,7 @@
 				D7CD920929AA775F0063E1D5 /* ProfilesTableViewCell.swift in Sources */,
 				D7CD920529AA11E90063E1D5 /* StudentLocationResults.swift in Sources */,
 				D73FE48B29A9E6210000174C /* StudentLocationAPI.swift in Sources */,
+				D7B4D83629AD4DBF00E390DB /* UpdateStudentJSONResponse.swift in Sources */,
 				D7CD920729AA12640063E1D5 /* StudentProfile.swift in Sources */,
 				D7CD920B29AA8F650063E1D5 /* MapViewController.swift in Sources */,
 			);

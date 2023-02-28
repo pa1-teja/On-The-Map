@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 import SystemConfiguration
+import MapKit
 
 
 
@@ -55,4 +56,20 @@ class Utilities{
 //          present(alert, animated: true)
         return alert
     }
+    
+    
+    class func getLocationCoordinates(from locationString: String, completionHandler:
+                                      @escaping (_ location: CLLocationCoordinate2D?, _ error: Error?)-> Void) {
+        let geocoder = CLGeocoder()
+        geocoder.geocodeAddressString(locationString) { (placemarks, error) in
+            guard let placemarks = placemarks,
+            let location = placemarks.first?.location?.coordinate else {
+                completionHandler(nil, error)
+                return
+            }
+            completionHandler(location, nil)
+        }
+    }
+    
+    
 }
