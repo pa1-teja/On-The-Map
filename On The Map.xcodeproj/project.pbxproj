@@ -30,7 +30,6 @@
 		D7CD920729AA12640063E1D5 /* StudentProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7CD920629AA12640063E1D5 /* StudentProfile.swift */; };
 		D7CD920929AA775F0063E1D5 /* ProfilesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7CD920829AA775F0063E1D5 /* ProfilesTableViewCell.swift */; };
 		D7CD920B29AA8F650063E1D5 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7CD920A29AA8F650063E1D5 /* MapViewController.swift */; };
-		D7DED70F29AF13C50066E2EE /* TextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7DED70E29AF13C50066E2EE /* TextFieldDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,7 +58,6 @@
 		D7CD920629AA12640063E1D5 /* StudentProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentProfile.swift; sourceTree = "<group>"; };
 		D7CD920829AA775F0063E1D5 /* ProfilesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilesTableViewCell.swift; sourceTree = "<group>"; };
 		D7CD920A29AA8F650063E1D5 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
-		D7DED70E29AF13C50066E2EE /* TextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,7 +109,6 @@
 		D7C45B7829A5E310008F9EE4 /* On The Map */ = {
 			isa = PBXGroup;
 			children = (
-				D7DED70D29AF13AA0066E2EE /* Delegates */,
 				D7C45B9029A5F05D008F9EE4 /* Views */,
 				D7C45B8F29A5F046008F9EE4 /* Controllers */,
 				D7C45B8E29A5E355008F9EE4 /* Models */,
@@ -183,14 +180,6 @@
 				D7C45B9729A660D5008F9EE4 /* Utils.swift */,
 			);
 			path = BaseAppUtils;
-			sourceTree = "<group>";
-		};
-		D7DED70D29AF13AA0066E2EE /* Delegates */ = {
-			isa = PBXGroup;
-			children = (
-				D7DED70E29AF13C50066E2EE /* TextFieldDelegate.swift */,
-			);
-			path = Delegates;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -281,7 +270,6 @@
 				D7CD920929AA775F0063E1D5 /* ProfilesTableViewCell.swift in Sources */,
 				D7CD920529AA11E90063E1D5 /* StudentLocationResults.swift in Sources */,
 				D73FE48B29A9E6210000174C /* StudentLocationAPI.swift in Sources */,
-				D7DED70F29AF13C50066E2EE /* TextFieldDelegate.swift in Sources */,
 				D7B4D83629AD4DBF00E390DB /* UpdateStudentJSONResponse.swift in Sources */,
 				D7CD920729AA12640063E1D5 /* StudentProfile.swift in Sources */,
 				D7CD920B29AA8F650063E1D5 /* MapViewController.swift in Sources */,

@@ -7,7 +7,7 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var userEmailAddr: UITextField!
     
@@ -25,8 +25,14 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        userEmailAddr.delegate = Utilities.textFieldDelegate()
-        userPassword.delegate = Utilities.textFieldDelegate()
+        
+        
+        userEmailAddr.delegate = self
+        
+        userEmailAddr.enablesReturnKeyAutomatically = true
+        userPassword.delegate = self
+        
+        userPassword.enablesReturnKeyAutomatically = true
         
         isUserScreenInteraction(isEnabled: true)
         // Do any additional setup after loading the view.
@@ -42,9 +48,20 @@ class LoginViewController: UIViewController {
         }
     }
     
+
     
     @IBAction func onClickSignUp(){
         UIApplication.shared.open(URL(string: "https://www.udacity.com/account/auth#!/signup")!)
+    }
+    
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        textField.text = ""
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
     
     

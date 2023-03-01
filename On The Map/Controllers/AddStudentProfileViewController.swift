@@ -8,7 +8,7 @@
 import UIKit
 import MapKit
 
-class AddStudentProfileViewController: UIViewController {
+class AddStudentProfileViewController: UIViewController, UITextFieldDelegate {
 
     
     
@@ -20,13 +20,30 @@ class AddStudentProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        locationName.delegate = Utilities.textFieldDelegate()
-        profileLink.delegate = Utilities.textFieldDelegate()
+        
+        
+        locationName.delegate = self
+        
+        locationName.enablesReturnKeyAutomatically = true
+        profileLink.delegate = self
+        
+        profileLink.enablesReturnKeyAutomatically = true
+        
         // Do any additional setup after loading the view.
         toggleScreenAcessebility(isEnabled: true)
         navigationItem.title = "Add Location"
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "CANCEL", style: .plain, target: self, action: #selector(moveBackToTabs))
     }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        textField.text = ""
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
     
     @objc func moveBackToTabs(){
         navigationController?.popViewController(animated: true)

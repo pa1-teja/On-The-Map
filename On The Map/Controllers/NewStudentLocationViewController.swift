@@ -41,6 +41,11 @@ class NewStudentLocationViewController: UIViewController, MKMapViewDelegate {
         
         annotation.coordinate = CLLocationCoordinate2D(latitude: locationCoordinates!.latitude, longitude: locationCoordinates!.longitude)
         annotation.title = typedAddress!
+        let span = MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05)
+        
+        let region = MKCoordinateRegion(center: annotation.coordinate, span: span)
+        
+        mapView.setRegion(region, animated: false)
         mapView.addAnnotation(annotation)
     }
     

@@ -13,11 +13,6 @@ import MapKit
 
 
 class Utilities{
-    
-    
-    class func textFieldDelegate() -> UITextFieldDelegate{
-        return GenericTextFieldDelegate()
-    }
    
     class func isConnectedToNetwork() -> Bool {
           var zeroAddress = sockaddr_in()
