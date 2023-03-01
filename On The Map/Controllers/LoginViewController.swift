@@ -17,12 +17,17 @@ class LoginViewController: UIViewController {
     
     @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
     
+    
 
     var sharedAppDelegateObject = UIApplication.shared.delegate as! AppDelegate
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        userEmailAddr.delegate = Utilities.textFieldDelegate()
+        userPassword.delegate = Utilities.textFieldDelegate()
+        
         isUserScreenInteraction(isEnabled: true)
         // Do any additional setup after loading the view.
         let emailTxt = userEmailAddr.text
@@ -86,7 +91,7 @@ class LoginViewController: UIViewController {
             
         }else{
             isUserScreenInteraction(isEnabled: true)
-            present(Utilities.showAlertDialog(alertTitle: "Oops", alertMessage: "Your email or password are incorrect. Please check and try again.", okButtonTxt: "OK"), animated: true)
+            present(Utilities.showAlertDialog(alertTitle: "Oops", alertMessage: error!.localizedDescription, okButtonTxt: "OK"), animated: true)
         }
     }
     

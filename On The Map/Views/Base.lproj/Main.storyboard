@@ -187,51 +187,6 @@
             </objects>
             <point key="canvasLocation" x="4969" y="-237"/>
         </scene>
-        <!--Root View Controller-->
-        <scene sceneID="b45-WT-28e">
-            <objects>
-                <tableViewController id="hs0-Os-Nrf" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="bK0-ci-SvU">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Cm3-In-Zjb">
-                                <rect key="frame" x="0.0" y="50" width="393" height="43.666667938232422"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Cm3-In-Zjb" id="Eb7-ZV-o6g">
-                                    <rect key="frame" x="0.0" y="0.0" width="393" height="43.666667938232422"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="hs0-Os-Nrf" id="Zqd-Yv-9Ya"/>
-                            <outlet property="delegate" destination="hs0-Os-Nrf" id="1fA-1w-4Ga"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="blk-Io-PGQ"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="A9c-m7-oeX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2047" y="-657"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="4xX-HT-eQA">
-            <objects>
-                <navigationController id="Eg2-2Q-LPf" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="BkC-EP-1nY">
-                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="hs0-Os-Nrf" kind="relationship" relationship="rootViewController" id="j8J-Aj-50c"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ndg-xM-4OD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1141" y="-657"/>
-        </scene>
         <!--Add Student Profile View Controller-->
         <scene sceneID="6DL-dE-07W">
             <objects>
@@ -252,7 +207,7 @@
                                     <constraint firstAttribute="height" constant="50" id="L8n-h7-nsO"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="yes" smartInsertDeleteType="yes" textContentType="address-level1+2"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="yes" enablesReturnKeyAutomatically="YES" smartInsertDeleteType="yes" textContentType="address-level1+2"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Profile Link" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Eej-CV-4la" userLabel="Profile Link">
                                 <rect key="frame" x="60" y="432" width="273" height="40"/>
@@ -260,7 +215,7 @@
                                     <constraint firstAttribute="height" constant="40" id="Vbh-mO-huo"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" textContentType="url"/>
+                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" textContentType="url"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jsn-ch-ioa" userLabel="Fine Location Button">
                                 <rect key="frame" x="60" y="512" width="273" height="40"/>
@@ -273,13 +228,18 @@
                                     <action selector="pinLocationOnMap" destination="cee-C2-1Ln" eventType="touchUpInside" id="Dmd-MS-ifk"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="EhN-u8-5EU">
+                                <rect key="frame" x="30" y="592" width="333" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="t88-WB-ZaU"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="N1k-IG-fp9" firstAttribute="leading" secondItem="t88-WB-ZaU" secondAttribute="leading" constant="80" id="1nG-GF-Z4Q"/>
                             <constraint firstItem="jsn-ch-ioa" firstAttribute="leading" secondItem="t88-WB-ZaU" secondAttribute="leading" constant="60" id="YtD-WJ-aG1"/>
+                            <constraint firstItem="EhN-u8-5EU" firstAttribute="top" secondItem="jsn-ch-ioa" secondAttribute="bottom" constant="40" id="adR-iL-wcT"/>
                             <constraint firstItem="t88-WB-ZaU" firstAttribute="bottom" secondItem="jsn-ch-ioa" secondAttribute="bottom" constant="266" id="bwx-qQ-gQY"/>
+                            <constraint firstItem="EhN-u8-5EU" firstAttribute="leading" secondItem="t88-WB-ZaU" secondAttribute="leading" constant="30" id="d9N-eH-hkI"/>
                             <constraint firstItem="Eej-CV-4la" firstAttribute="leading" secondItem="t88-WB-ZaU" secondAttribute="leading" constant="60" id="eDi-3F-cfs"/>
                             <constraint firstItem="N1k-IG-fp9" firstAttribute="top" secondItem="t88-WB-ZaU" secondAttribute="top" constant="90" id="gsZ-VJ-vx6"/>
                             <constraint firstItem="jsn-ch-ioa" firstAttribute="top" secondItem="Eej-CV-4la" secondAttribute="bottom" constant="40" id="hi5-dW-jrw"/>
@@ -287,6 +247,7 @@
                             <constraint firstItem="E74-WW-8DH" firstAttribute="leading" secondItem="t88-WB-ZaU" secondAttribute="leading" constant="60" id="jgq-tC-CAR"/>
                             <constraint firstItem="t88-WB-ZaU" firstAttribute="trailing" secondItem="Eej-CV-4la" secondAttribute="trailing" constant="60" id="lbL-hY-BWy"/>
                             <constraint firstItem="t88-WB-ZaU" firstAttribute="trailing" secondItem="E74-WW-8DH" secondAttribute="trailing" constant="60" id="lya-Lm-Wbr"/>
+                            <constraint firstItem="t88-WB-ZaU" firstAttribute="trailing" secondItem="EhN-u8-5EU" secondAttribute="trailing" constant="30" id="me7-pK-hU2"/>
                             <constraint firstItem="t88-WB-ZaU" firstAttribute="trailing" secondItem="N1k-IG-fp9" secondAttribute="trailing" constant="80" id="u9E-Dy-eCh"/>
                             <constraint firstItem="Eej-CV-4la" firstAttribute="top" secondItem="E74-WW-8DH" secondAttribute="bottom" constant="30" id="yL3-Vd-gO3"/>
                         </constraints>
@@ -294,6 +255,7 @@
                     <navigationItem key="navigationItem" id="lPb-g1-NEm"/>
                     <connections>
                         <outlet property="findLocationOnMap" destination="jsn-ch-ioa" id="RVk-W2-ilC"/>
+                        <outlet property="geoCodeLoadingIndicator" destination="EhN-u8-5EU" id="EcK-Ea-Mgx"/>
                         <outlet property="locationName" destination="E74-WW-8DH" id="FXC-Tp-VN4"/>
                         <outlet property="profileLink" destination="Eej-CV-4la" id="Jyo-dv-f4a"/>
                         <segue destination="Zmt-sE-P3U" kind="show" identifier="New Profile Map Pin" id="csB-kz-LKM"/>

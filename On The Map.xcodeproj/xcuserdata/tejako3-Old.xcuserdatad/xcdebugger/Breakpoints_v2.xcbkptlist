@@ -158,8 +158,8 @@
             filePath = "On The Map/Controllers/AddStudentProfileViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "33"
-            endingLineNumber = "33"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
             landmarkName = "pinLocationOnMap()"
             landmarkType = "7">
             <Locations>
@@ -199,47 +199,15 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "A9DFC368-0D8B-48D5-ADCA-3D3D39CBC91C"
+            uuid = "F7CDC7E7-8A4F-4267-ADD6-671F9A085FB0"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "On The Map/Controllers/AddStudentProfileViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "42"
-            endingLineNumber = "42"
-            landmarkName = "pinLocationOnMap()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "F01DB6D1-C0AC-4F75-B0A7-8F97E08193F2"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "On The Map/Controllers/NewStudentLocationViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "71"
-            endingLineNumber = "71"
-            landmarkName = "getLocationPinCoord(coordinates:error:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "F7CDC7E7-8A4F-4267-ADD6-671F9A085FB0"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "On The Map/Controllers/NewStudentLocationViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "61"
-            endingLineNumber = "61"
+            startingLineNumber = "63"
+            endingLineNumber = "63"
             landmarkName = "registerStudentProfile(success:error:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -254,13 +222,13 @@
             filePath = "On The Map/Controllers/LoginViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "48"
-            endingLineNumber = "48"
+            startingLineNumber = "53"
+            endingLineNumber = "53"
             landmarkName = "onClickLogin(_:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "C8431552-A422-467E-9D7D-10A012A2AF8B - b4e9f63110eb6e7f"
+                  uuid = "C8431552-A422-467E-9D7D-10A012A2AF8B - b4e9f63110eb7146"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -270,12 +238,12 @@
                   urlString = "file:///Users/tejako3_1/Downloads/Udacity-IOS/Learning-Projects/On%20The%20Map/On%20The%20Map/Controllers/LoginViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "44"
-                  endingLineNumber = "44"
+                  startingLineNumber = "53"
+                  endingLineNumber = "53"
                   offsetFromSymbolStart = "164">
                </Location>
                <Location
-                  uuid = "C8431552-A422-467E-9D7D-10A012A2AF8B - b4e9f63110eb6e7f"
+                  uuid = "C8431552-A422-467E-9D7D-10A012A2AF8B - b4e9f63110eb7146"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -285,9 +253,9 @@
                   urlString = "file:///Users/tejako3_1/Downloads/Udacity-IOS/Learning-Projects/On%20The%20Map/On%20The%20Map/Controllers/LoginViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "44"
-                  endingLineNumber = "44"
-                  offsetFromSymbolStart = "388">
+                  startingLineNumber = "53"
+                  endingLineNumber = "53"
+                  offsetFromSymbolStart = "385">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -302,13 +270,13 @@
             filePath = "On The Map/Controllers/LoginViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "65"
-            endingLineNumber = "65"
+            startingLineNumber = "70"
+            endingLineNumber = "70"
             landmarkName = "onClickLogin(_:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "D0E2A9A1-9DD9-45FB-BB06-BBABB3DCF355 - b4e9f63110eb704e"
+                  uuid = "D0E2A9A1-9DD9-45FB-BB06-BBABB3DCF355 - b4e9f63110eb7315"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -318,12 +286,12 @@
                   urlString = "file:///Users/tejako3_1/Downloads/Udacity-IOS/Learning-Projects/On%20The%20Map/On%20The%20Map/Controllers/LoginViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "61"
-                  endingLineNumber = "61"
-                  offsetFromSymbolStart = "3472">
+                  startingLineNumber = "70"
+                  endingLineNumber = "70"
+                  offsetFromSymbolStart = "3469">
                </Location>
                <Location
-                  uuid = "D0E2A9A1-9DD9-45FB-BB06-BBABB3DCF355 - f791b1ed713e98dc"
+                  uuid = "D0E2A9A1-9DD9-45FB-BB06-BBABB3DCF355 - f791b1ed713e9b0b"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -333,11 +301,43 @@
                   urlString = "file:///Users/tejako3_1/Downloads/Udacity-IOS/Learning-Projects/On%20The%20Map/On%20The%20Map/Controllers/LoginViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "63"
-                  endingLineNumber = "63"
+                  startingLineNumber = "72"
+                  endingLineNumber = "72"
                   offsetFromSymbolStart = "286">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "931F0A4C-B283-4C03-B364-38867A7346F2"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "On The Map/Controllers/NewStudentLocationViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "67"
+            endingLineNumber = "67"
+            landmarkName = "registerStudentProfile(success:error:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "AB42E82B-1F83-4DEB-9A25-F0F92D5B4A74"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "On The Map/Controllers/NewStudentLocationViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
+            landmarkName = "addStudentProfile(_:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

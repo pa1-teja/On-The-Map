@@ -16,8 +16,9 @@ class NewStudentLocationViewController: UIViewController, MKMapViewDelegate {
     
     @IBOutlet weak var mapView: MKMapView!
     
-    var newStudentLocation: String?
-    var newStudentProfileLink: String?
+    var locationCoordinates: CLLocationCoordinate2D?
+    var typedAddress: String?
+    var profileLink: String?
     
      let annotation = MKPointAnnotation()
     
@@ -35,9 +36,12 @@ class NewStudentLocationViewController: UIViewController, MKMapViewDelegate {
         
         navigationItem.backBarButtonItem = UIBarButtonItem(title: "Add Location", style: .plain, target: self, action: #selector(moveBack))
         
-        Utilities.getLocationCoordinates(from: newStudentLocation ?? "", completionHandler: getLocationPinCoord(coordinates:error:))
         mapView.delegate = self
         mapView.register(StudentDetailAnnotationView.self, forAnnotationViewWithReuseIdentifier: MKMapViewDefaultAnnotationViewReuseIdentifier)
+        
+        annotation.coordinate = CLLocationCoordinate2D(latitude: locationCoordinates!.latitude, longitude: locationCoordinates!.longitude)
+        annotation.title = typedAddress!
+        mapView.addAnnotation(annotation)
     }
     
     @objc func moveBack(){
@@ -46,9 +50,7 @@ class NewStudentLocationViewController: UIViewController, MKMapViewDelegate {
     
   
     @IBAction func addStudentProfile(_ sender: Any) {
-        let requestBody = "{\"uniqueKey\": \"\(loginObj.account.key) \", \"firstName\": \"John\", \"lastName\": \"Doe\",\"mapString\": \"\(newStudentLocation!)\", \"mediaURL\": \"\(newStudentProfileLink!)\", \"latitude\": \(annotation.coordinate.latitude), \"longitude\": \(annotation.coordinate.longitude)}"
-        
-        
+        let requestBody = "{\"uniqueKey\": \"\(loginObj.account.key) \", \"firstName\": \"John\", \"lastName\": \"Doe\",\"mapString\": \"\(typedAddress!)\", \"mediaURL\": \"\(profileLink!)\", \"latitude\": \(annotation.coordinate.latitude), \"longitude\": \(annotation.coordinate.longitude)}"
         
         GenericAPIInfo.taskInteractWithAPI(methodType: GenericAPIInfo.MethodType.POST, url: URL(string:StudentLocationAPI.StudentLocationEndpoint.baseEndpoint)!,
                                            requestBody: requestBody,
@@ -62,16 +64,7 @@ class NewStudentLocationViewController: UIViewController, MKMapViewDelegate {
             performSegue(withIdentifier: "Back To Profiles", sender: nil)
             
         } else{
-            present(Utilities.showAlertDialog(alertTitle: "Network Error", alertMessage: "Failed to add the student profile", okButtonTxt: "OK"), animated: true)
-        }
-    }
-    
-    func getLocationPinCoord(coordinates: CLLocationCoordinate2D?, error: Error?){
-        
-        if(coordinates != nil){
-            annotation.coordinate = CLLocationCoordinate2D(latitude: coordinates!.latitude, longitude: coordinates!.longitude)
-            annotation.title = newStudentLocation
-            mapView.addAnnotation(annotation)
+            present(Utilities.showAlertDialog(alertTitle: "Network Error", alertMessage: "Failed to add the student profile : \(error?.localizedDescription)", okButtonTxt: "OK"), animated: true)
         }
     }
 }

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import MapKit
 
 class AddStudentProfileViewController: UIViewController {
 
@@ -14,12 +15,15 @@ class AddStudentProfileViewController: UIViewController {
     @IBOutlet weak var locationName: UITextField!
     @IBOutlet weak var profileLink: UITextField!
     @IBOutlet weak var findLocationOnMap: UIButton!
+    @IBOutlet weak var geoCodeLoadingIndicator: UIActivityIndicatorView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        locationName.delegate = Utilities.textFieldDelegate()
+        profileLink.delegate = Utilities.textFieldDelegate()
         // Do any additional setup after loading the view.
-        
+        toggleScreenAcessebility(isEnabled: true)
         navigationItem.title = "Add Location"
         navigationItem.leftBarButtonItem = UIBarButtonItem(title: "CANCEL", style: .plain, target: self, action: #selector(moveBackToTabs))
     }
@@ -37,12 +41,33 @@ class AddStudentProfileViewController: UIViewController {
         } else if(profileLink.isEmpty){
             present(Utilities.showAlertDialog(alertTitle: "Profile Error", alertMessage: "Please enter your profile link", okButtonTxt: "OK"), animated: true)
         }else{
+            toggleScreenAcessebility(isEnabled: false)
+            Utilities.getLocationCoordinates(from: address, completionHandler: getLocationPinCoord(coordinates:error:))
+        }
+    }
+    
+    func getLocationPinCoord(coordinates: CLLocationCoordinate2D?, error: Error?){
+        
+        if(coordinates != nil){
+           toggleScreenAcessebility(isEnabled: true)
             let controller = storyboard?.instantiateViewController(withIdentifier: "New Student Location") as! NewStudentLocationViewController
             
-            controller.newStudentLocation = address
-            controller.newStudentProfileLink = profileLink
+            controller.locationCoordinates = coordinates
+            controller.profileLink = profileLink.text!
+            controller.typedAddress = locationName.text!
             
             navigationController?.pushViewController(controller, animated: true)
+        } else{
+            toggleScreenAcessebility(isEnabled: true)
+            present(Utilities.showAlertDialog(alertTitle: "Location Error", alertMessage: error!.localizedDescription, okButtonTxt: "OK"), animated: true)
+            
         }
+    }
+    
+    func toggleScreenAcessebility(isEnabled: Bool){
+        locationName.isEnabled = isEnabled
+        profileLink.isEnabled = isEnabled
+        findLocationOnMap.isEnabled = isEnabled
+        geoCodeLoadingIndicator.isHidden = isEnabled
     }
 }
